@@ -2,7 +2,6 @@
   lib,
   config,
   pkgs,
-  inputs,
   ...
 }:
 {
@@ -14,7 +13,7 @@
     home.packages = [
       pkgs.filesort
       (pkgs.callPackage ./../../packages/auto-updater { })
-      (pkgs.callPackage ./../../packages/status-projets-viewer { inherit (inputs) crane; })
+      (import ../../packages/status-projets-viewer).outputs.packages.x86_64-linux.default
       pkgs.flake-checker
     ];
   };
