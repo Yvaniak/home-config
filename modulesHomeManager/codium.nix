@@ -68,6 +68,9 @@
           #lazygit
           inputs.nix-vscode-extensions.extensions.x86_64-linux.open-vsx.chaitanyashahare.lazygit
 
+          #conventional-commits
+          inputs.nix-vscode-extensions.extensions.x86_64-linux.open-vsx.vivaxy.vscode-conventional-commits
+
           #meson
           pkgs.vscode-extensions.mesonbuild.mesonbuild
         ];
