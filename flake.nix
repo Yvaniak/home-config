@@ -118,7 +118,6 @@
           };
 
           checks = {
-            inherit (config.packages) myNvim;
             inherit (config.packages) auto-updater;
             inherit (config.packages) status-projets-viewer;
             ewen-home = flake.homeConfigurations.ewen.activation-script;
