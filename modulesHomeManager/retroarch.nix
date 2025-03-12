@@ -16,6 +16,8 @@
         # pkgs.libretro.nestopia
         # pkgs.libretro.sameboy
         pkgs.libretro.flycast
+        pkgs.libretro.pcsx2
+        pkgs.libretro.dolphin
       ]))
     ];
   };
