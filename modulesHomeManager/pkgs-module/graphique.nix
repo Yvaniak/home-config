@@ -54,6 +54,8 @@ in
       pkgs.podman
       pkgs.nixpacks
 
+      pkgs.obsidian
+
       (config.lib.nixGL.wrap pkgs.kitty)
       (config.lib.nixGL.wrap pkgs.firefox)
       (config.lib.nixGL.wrap pkgs.godot_4-mono)
