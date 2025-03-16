@@ -79,6 +79,7 @@
         {
           pkgs,
           config,
+          lib,
           ...
         }:
 
@@ -117,13 +118,17 @@
             enterShell = "echo hello from home-config";
           };
 
-          checks = {
-            inherit (config.packages) auto-updater;
-            inherit (config.packages) status-projets-viewer;
-            ewen-home = flake.homeConfigurations.ewen.activation-script;
-            examens-home = flake.homeConfigurations.examens.activation-script;
-            serveur-home = flake.homeConfigurations.serveur.activation-script;
-          };
+          checks =
+            {
+              inherit (config.packages) auto-updater;
+              inherit (config.packages) status-projets-viewer;
+            }
+            // lib.mkIf (builtins.getEnv "HOMECONFIG_CHECKS_RESTRICT" != "1") {
+
+              ewen-home = flake.homeConfigurations.ewen.activation-script;
+              examens-home = flake.homeConfigurations.examens.activation-script;
+              serveur-home = flake.homeConfigurations.serveur.activation-script;
+            };
         };
 
       flake =
