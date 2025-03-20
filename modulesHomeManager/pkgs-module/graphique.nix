@@ -59,6 +59,7 @@ in
       (config.lib.nixGL.wrap pkgs.kitty)
       (config.lib.nixGL.wrap pkgs.firefox)
       (config.lib.nixGL.wrap pkgs.godot_4-mono)
+      (config.lib.nixGL.wrap pkgs.prismlauncher)
     ];
   };
 }
