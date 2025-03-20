@@ -41,6 +41,7 @@
       pkgs.pre-commit
       pkgs.devenv
       pkgs.git-subrepo
+      pkgs.ncdu
     ];
   };
 }
