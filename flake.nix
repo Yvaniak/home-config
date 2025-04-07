@@ -83,20 +83,8 @@
           ...
         }:
 
-        let
-          configNvf = {
-            options = { };
-            config = import ./packages/nvf.nix { inherit pkgs; };
-          };
-
-          customNeovim = inputs.nvf.lib.neovimConfiguration {
-            inherit pkgs;
-            modules = [ configNvf ];
-          };
-        in
         {
           packages = {
-            myNvim = customNeovim.neovim;
             auto-updater = pkgs.callPackage ./packages/auto-updater { };
             status-projets-viewer =
               (import ./packages/status-projets-viewer).outputs.packages.x86_64-linux.default;
