@@ -25,8 +25,11 @@
           packages.default = pkgs.callPackage ./. { };
           devenv.shells.default = {
             mydevenvs = {
-              c.enable = true;
-              c.meson.enable = true;
+              c = {
+                enable = true;
+                meson.enable = true;
+                meson.name = "auto-updater";
+              };
               nix = {
                 enable = true;
                 flake.enable = true;
