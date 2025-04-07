@@ -39,7 +39,7 @@
           #csharp
           inputs.nix-vscode-extensions.extensions.${pkgs.system}.open-vsx.neikeq.godot-csharp-vscode
           pkgs.vscode-extensions.ms-dotnettools.csharp
-          inputs.nix-vscode-extensions.extensions.${pkgs.system}.vscode-marketplace.ms-dotnettools.csdevkit
+          pkgs.vscode-extensions.ms-dotnettools.csdevkit
           inputs.nix-vscode-extensions.extensions.${pkgs.system}.vscode-marketplace.ms-dotnettools.vscode-dotnet-pack
 
           #nix
