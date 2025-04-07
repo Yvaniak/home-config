@@ -48,7 +48,6 @@ in
       pkgs.mate.atril
       myTexLive
       pkgs.quickemu
-      pkgs.anytype
       pkgs.pdfpc
 
       pkgs.podman
