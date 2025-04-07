@@ -10,17 +10,29 @@ alias b := build
 build:
     meson compile -C builddir
 
+alias r := run
+
+# run the software
+run: build
+    ./builddir/auto-updater
+
 alias t := tests
 
 # launch all the tests
 tests: build
     meson test -C builddir
 
-alias p := pre-commit-all
+alias pa := pre-commit-all
 
 # launch all the pre-commit hooks on all the files
 pre-commit-all:
     pre-commit run --all-files
+
+alias p := pre-commit
+
+# launch all the pre-commit hooks
+pre-commit:
+    pre-commit run
 
 alias nc := nix-checks
 
@@ -31,7 +43,7 @@ nix-checks:
 alias a := all
 
 # launch all the steps
-all: build tests pre-commit-all nix-checks
+all: pre-commit-all build tests nix-checks
 
 alias w := watch
 
