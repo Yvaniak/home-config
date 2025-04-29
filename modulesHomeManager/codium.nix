@@ -42,6 +42,9 @@
           pkgs.vscode-extensions.ms-dotnettools.csdevkit
           inputs.nix-vscode-extensions.extensions.${pkgs.system}.vscode-marketplace.ms-dotnettools.vscode-dotnet-pack
 
+          #typst
+          pkgs.vscode-extensions.myriad-dreamin.tinymist
+
           #nix
           pkgs.vscode-extensions.jnoortheen.nix-ide
           inputs.nix-vscode-extensions.extensions.x86_64-linux.open-vsx.pinage404.nix-extension-pack
@@ -73,6 +76,9 @@
 
           #meson
           pkgs.vscode-extensions.mesonbuild.mesonbuild
+
+          #pdf
+          pkgs.vscode-extensions.tomoki1207.pdf
         ];
         userSettings = {
           "editor.formatOnSave" = true;
