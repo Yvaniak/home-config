@@ -27,7 +27,7 @@
           ];
         };
 
-        initExtra = ''
+        initContent = ''
 
           # Use vim bindings.
           set -o vi
