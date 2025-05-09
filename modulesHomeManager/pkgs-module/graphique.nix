@@ -26,7 +26,6 @@ in
       pkgs.dolphin-emu
 
       pkgs.jellyfin-web
-      pkgs.freeplane
       pkgs.libreoffice-fresh
       pkgs.mpv
       pkgs.nemo-with-extensions
