@@ -38,6 +38,7 @@
 
         sessionVariables = {
           FLAKE = "/home/$USER/projets/coding/home-config";
+          NH_FLAKE = "/home/$USER/projets/coding/home-config";
           NIXPKGS_ALLOW_UNFREE = 1;
         };
 
