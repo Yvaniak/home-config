@@ -10,7 +10,7 @@
     stylix-module.enable = lib.mkEnableOption "enable theming with stylix module";
   };
 
-  imports = [ inputs.stylix.homeManagerModules.stylix ];
+  imports = [ inputs.stylix.homeModules.stylix ];
   config = lib.mkIf config.stylix-module.enable {
     stylix = {
       enable = true;

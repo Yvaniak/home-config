@@ -22,7 +22,6 @@
           theme = "agnoster";
           plugins = [
             "sudo"
-            "thefuck"
             "git"
           ];
         };
@@ -71,7 +70,7 @@
         autocd = true;
       };
 
-      thefuck = {
+      pay-respects = {
         enable = true;
         enableZshIntegration = true;
       };

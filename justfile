@@ -4,11 +4,17 @@
 default:
     just --list
 
-alias p := pre-commit-all
+alias pa := pre-commit-all
 
 # launch all the pre-commit hooks on all the files
 pre-commit-all:
     pre-commit run --all-files
+
+alias p := pre-commit
+
+# launch all the pre-commit hooks
+pre-commit:
+    pre-commit run
 
 alias nc := nix-checks
 
@@ -18,7 +24,7 @@ nix-checks:
 
 alias a := all
 
-# launch all the steps
+# launch all the steps that involves checks
 all: pre-commit-all nix-checks
 
 alias w := watch
