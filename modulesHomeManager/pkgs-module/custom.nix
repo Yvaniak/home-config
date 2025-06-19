@@ -12,8 +12,8 @@
   config = lib.mkIf config.custom.enable {
     home.packages = [
       pkgs.filesort
+      pkgs.status-projets-viewer
       (pkgs.callPackage ./../../packages/auto-updater { })
-      (import ../../packages/status-projets-viewer).outputs.packages.x86_64-linux.default
       pkgs.flake-checker
     ];
   };

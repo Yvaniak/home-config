@@ -58,7 +58,12 @@
       url = "github:yvaniak/filesort";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    #fin perso
+
+    status-projets-viewer = {
+      url = "github:yvaniak/status-projets-viewer";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    # fin perso
   };
 
   outputs =
@@ -86,8 +91,6 @@
         {
           packages = {
             auto-updater = pkgs.callPackage ./packages/auto-updater { };
-            status-projets-viewer =
-              (import ./packages/status-projets-viewer).outputs.packages.x86_64-linux.default;
           };
 
           devenv.shells.default = {
@@ -109,7 +112,6 @@
           checks =
             {
               inherit (config.packages) auto-updater;
-              inherit (config.packages) status-projets-viewer;
             }
             // lib.mkIf (builtins.getEnv "HOMECONFIG_CHECKS_RESTRICT" != "1") {
 
@@ -124,6 +126,7 @@
           overlay = _final: _prev: {
             nix-search = inputs.nix-search.packages.${pkgs.system}.default;
             filesort = inputs.filesort.packages.${pkgs.system}.default;
+            status-projets-viewer = inputs.status-projets-viewer.packages.${pkgs.system}.default;
           };
           system = "x86_64-linux";
           pkgs = import inputs.nixpkgs {
