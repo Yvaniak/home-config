@@ -109,16 +109,15 @@
             enterShell = "echo hello from home-config";
           };
 
-          checks =
-            {
-              inherit (config.packages) auto-updater;
-            }
-            // lib.mkIf (builtins.getEnv "HOMECONFIG_CHECKS_RESTRICT" != "1") {
+          checks = {
+            inherit (config.packages) auto-updater;
+          }
+          // lib.mkIf (builtins.getEnv "HOMECONFIG_CHECKS_RESTRICT" != "1") {
 
-              ewen-home = flake.homeConfigurations.ewen.activation-script;
-              examens-home = flake.homeConfigurations.examens.activation-script;
-              serveur-home = flake.homeConfigurations.serveur.activation-script;
-            };
+            ewen-home = flake.homeConfigurations.ewen.activation-script;
+            examens-home = flake.homeConfigurations.examens.activation-script;
+            serveur-home = flake.homeConfigurations.serveur.activation-script;
+          };
         };
 
       flake =
