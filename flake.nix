@@ -82,17 +82,11 @@
 
       perSystem =
         {
-          pkgs,
-          config,
           lib,
           ...
         }:
 
         {
-          packages = {
-            auto-updater = pkgs.callPackage ./packages/auto-updater { };
-          };
-
           devenv.shells.default = {
             mydevenvs = {
               nix = {
@@ -110,7 +104,6 @@
           };
 
           checks = {
-            inherit (config.packages) auto-updater;
           }
           // lib.mkIf (builtins.getEnv "HOMECONFIG_CHECKS_RESTRICT" != "1") {
 

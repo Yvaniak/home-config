@@ -13,7 +13,6 @@
     home.packages = [
       pkgs.filesort
       pkgs.status-projets-viewer
-      (pkgs.callPackage ./../../packages/auto-updater { })
       pkgs.flake-checker
     ];
   };
