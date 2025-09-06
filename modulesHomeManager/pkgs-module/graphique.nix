@@ -54,6 +54,8 @@ in
 
       pkgs.obsidian
 
+      pkgs.jetbrains-toolbox
+
       (config.lib.nixGL.wrap pkgs.kitty)
       (config.lib.nixGL.wrap pkgs.firefox)
       (config.lib.nixGL.wrap pkgs.godot_4-mono)
