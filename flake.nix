@@ -93,7 +93,6 @@
                 enable = true;
                 flake.enable = true;
               };
-              c.enable = true;
               tools.just = {
                 enable = true;
                 pre-commit.enable = true;
