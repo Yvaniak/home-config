@@ -113,6 +113,10 @@
     };
     home.packages = [
       pkgs.clang-tools # for the clangd extension, to have the clangd lsp server
+
+      pkgs.jdk # plantuml
+      pkgs.graphviz
+      pkgs.plantuml-server
     ];
   };
 }
