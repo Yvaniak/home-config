@@ -47,7 +47,7 @@
 
           #nix
           pkgs.vscode-extensions.jnoortheen.nix-ide
-          inputs.nix-vscode-extensions.extensions.x86_64-linux.open-vsx.pinage404.nix-extension-pack
+          inputs.nix-vscode-extensions.extensions.${pkgs.system}.open-vsx.pinage404.nix-extension-pack
 
           #yaml
           pkgs.vscode-extensions.redhat.vscode-yaml
@@ -79,6 +79,9 @@
 
           #pdf
           pkgs.vscode-extensions.tomoki1207.pdf
+
+          #uml excalidraw
+          inputs.nix-vscode-extensions.extensions.${pkgs.system}.open-vsx.pomdtr.excalidraw-editor
         ];
         userSettings = {
           "editor.formatOnSave" = true;
