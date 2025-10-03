@@ -1,10 +1,16 @@
 { lib, config, ... }:
 {
-  imports = [ ./nextcloud.nix ];
+  imports = [
+    ./nextcloud.nix
+    ./kitty.nix
+  ];
 
   options = {
     apps.enable = lib.mkEnableOption "enable apps bundle";
   };
 
-  config = lib.mkIf config.apps.enable { nextcloud.enable = true; };
+  config = lib.mkIf config.apps.enable {
+    nextcloud.enable = true;
+    kitty.enable = true;
+  };
 }

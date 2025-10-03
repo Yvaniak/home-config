@@ -22,7 +22,7 @@
           hash = "sha256-5XVkJQkYkjdSZq3ElbRHFk6xV6slm7HY7ZTCdKPDnGo=";
         }
         + "/landscapes/conv-AuroraBorealis.png";
-      base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
+      base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
       cursor = {
         package = pkgs.rose-pine-cursor;
