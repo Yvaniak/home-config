@@ -15,6 +15,11 @@
       zoxide.enable = true;
       zoxide.enableZshIntegration = true;
 
+      starship = {
+        enable = true;
+        enableZshIntegration = true;
+      };
+
       zsh = {
         enable = true;
         oh-my-zsh = {

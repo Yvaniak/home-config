@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  pkgs,
   ...
 }:
 {
@@ -11,6 +12,7 @@
   config = lib.mkIf config.kitty.enable {
     programs.kitty = {
       enable = true;
+      package = config.lib.nixGL.wrap pkgs.kitty;
       settings = {
         cursor_trail = 3;
       };

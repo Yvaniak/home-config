@@ -5,6 +5,7 @@
     ./pass.nix
     ./gpg.nix
     ./comma.nix
+    ./eza.nix
   ];
 
   options = {
@@ -16,5 +17,6 @@
     pass.enable = true;
     gpg.enable = true;
     comma.enable = true;
+    eza.enable = true;
   };
 }
