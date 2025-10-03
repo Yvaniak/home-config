@@ -35,6 +35,7 @@
 
           #c
           pkgs.vscode-extensions.llvm-vs-code-extensions.vscode-clangd
+          inputs.nix-vscode-extensions.extensions.${pkgs.system}.open-vsx.notskm.clang-tidy
 
           #csharp
           inputs.nix-vscode-extensions.extensions.${pkgs.system}.open-vsx.neikeq.godot-csharp-vscode
@@ -82,6 +83,12 @@
 
           #uml excalidraw
           inputs.nix-vscode-extensions.extensions.${pkgs.system}.open-vsx.pomdtr.excalidraw-editor
+
+          #codacy
+          inputs.nix-vscode-extensions.extensions.${pkgs.system}.open-vsx.codacy-app.codacy
+
+          #theme
+          pkgs.vscode-extensions.catppuccin.catppuccin-vsc
         ];
         userSettings = {
           "editor.formatOnSave" = true;
