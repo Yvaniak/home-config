@@ -88,7 +88,7 @@
           inputs.nix-vscode-extensions.extensions.${pkgs.system}.open-vsx.codacy-app.codacy
 
           #theme
-          pkgs.vscode-extensions.catppuccin.catppuccin-vsc
+          inputs.nix-vscode-extensions.extensions.${pkgs.system}.open-vsx.catppuccin.catppuccin-vsc-pack
         ];
         userSettings = {
           "editor.formatOnSave" = true;
@@ -118,6 +118,8 @@
           "go.inlayHints.parameterNames" = true;
           "go.inlayHints.rangeVariableTypes" = true;
 
+          "workbench.iconTheme" = "catppuccin-mocha";
+          "workbench.colorTheme" = "Catppuccin Mocha";
         };
       };
     };
