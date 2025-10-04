@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }:
+{ lib, ... }:
 {
   imports = [ ../../modulesHomeManager ];
   home-common.enable = true;
@@ -11,6 +11,4 @@
 
   cli-apps.enable = lib.mkForce false;
   zsh.enable = true;
-  stylix.enable = false;
-  stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
 }
