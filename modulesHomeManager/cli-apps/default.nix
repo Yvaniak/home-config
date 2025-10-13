@@ -6,6 +6,7 @@
     ./gpg.nix
     ./comma.nix
     ./eza.nix
+    ./bat.nix
   ];
 
   options = {
@@ -18,5 +19,6 @@
     gpg.enable = true;
     comma.enable = true;
     eza.enable = true;
+    bat.enable = true;
   };
 }

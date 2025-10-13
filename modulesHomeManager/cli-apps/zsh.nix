@@ -54,6 +54,7 @@
           lofi = "mpv https://www.youtube.com/watch\\?v\\=jfKfPfyJRdk --no-video";
           f = "ssh -A -Y ewen.philippot@etu.umontpellier.fr@x2go.umontpellier.fr";
           lg = "lazygit";
+          cat = "bat";
         };
 
         plugins = [
