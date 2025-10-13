@@ -12,6 +12,7 @@
     ./retroarch.nix
     ./gnome.nix
     ./nix-options.nix
+    ./stylix.nix
     ./codium.nix
     ./cosmic.nix
   ];

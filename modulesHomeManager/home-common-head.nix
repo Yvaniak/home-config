@@ -16,6 +16,8 @@
 
     cosmic.enable = true;
 
+    stylix-module.enable = true;
+
     codium.enable = true;
 
     custom.enable = true;
