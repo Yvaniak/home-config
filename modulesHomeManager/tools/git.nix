@@ -15,15 +15,20 @@
       pkgs.lazygit
     ];
 
-    programs.git = {
-      enable = true;
-      ignores = [
-        "*~"
-        "*.swp"
-      ];
-      difftastic = {
+    programs = {
+      git = {
         enable = true;
-        color = "always";
+        ignores = [
+          "*~"
+          "*.swp"
+        ];
+      };
+      difftastic = {
+        git.enable = true;
+        enable = true;
+        options = {
+          color = "always";
+        };
       };
     };
   };

@@ -115,9 +115,10 @@
       flake =
         let
           overlay = _final: _prev: {
-            nix-search = inputs.nix-search.packages.${pkgs.system}.default;
-            filesort = inputs.filesort.packages.${pkgs.system}.default;
-            status-projets-viewer = inputs.status-projets-viewer.packages.${pkgs.system}.default;
+            nix-search = inputs.nix-search.packages.${pkgs.stdenv.hostPlatform.system}.default;
+            filesort = inputs.filesort.packages.${pkgs.stdenv.hostPlatform.system}.default;
+            status-projets-viewer =
+              inputs.status-projets-viewer.packages.${pkgs.stdenv.hostPlatform.system}.default;
           };
           system = "x86_64-linux";
           pkgs = import inputs.nixpkgs {

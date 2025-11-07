@@ -32,7 +32,7 @@ in
       pkgs.thunderbird
       pkgs.distrobox
       pkgs.caprine-bin
-      pkgs.whatsapp-for-linux
+      pkgs.wasistlos
       pkgs.gimp
       pkgs.krita
 

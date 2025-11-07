@@ -19,7 +19,7 @@
           #javascript (javascript et typescript built-in)
           pkgs.vscode-extensions.esbenp.prettier-vscode
           pkgs.vscode-extensions.dbaeumer.vscode-eslint
-          inputs.nix-vscode-extensions.extensions.${pkgs.system}.open-vsx.biomejs.biome
+          inputs.nix-vscode-extensions.extensions.${pkgs.stdenv.hostPlatform.system}.open-vsx.biomejs.biome
 
           #python
           pkgs.vscode-extensions.ms-python.python
@@ -35,20 +35,20 @@
 
           #c
           pkgs.vscode-extensions.llvm-vs-code-extensions.vscode-clangd
-          inputs.nix-vscode-extensions.extensions.${pkgs.system}.open-vsx.notskm.clang-tidy
+          inputs.nix-vscode-extensions.extensions.${pkgs.stdenv.hostPlatform.system}.open-vsx.notskm.clang-tidy
 
           #csharp
-          inputs.nix-vscode-extensions.extensions.${pkgs.system}.open-vsx.neikeq.godot-csharp-vscode
+          inputs.nix-vscode-extensions.extensions.${pkgs.stdenv.hostPlatform.system}.open-vsx.neikeq.godot-csharp-vscode
           pkgs.vscode-extensions.ms-dotnettools.csharp
           pkgs.vscode-extensions.ms-dotnettools.csdevkit
-          inputs.nix-vscode-extensions.extensions.${pkgs.system}.vscode-marketplace.ms-dotnettools.vscode-dotnet-pack
+          inputs.nix-vscode-extensions.extensions.${pkgs.stdenv.hostPlatform.system}.vscode-marketplace.ms-dotnettools.vscode-dotnet-pack
 
           #typst
           pkgs.vscode-extensions.myriad-dreamin.tinymist
 
           #nix
           pkgs.vscode-extensions.jnoortheen.nix-ide
-          inputs.nix-vscode-extensions.extensions.${pkgs.system}.open-vsx.pinage404.nix-extension-pack
+          inputs.nix-vscode-extensions.extensions.${pkgs.stdenv.hostPlatform.system}.open-vsx.pinage404.nix-extension-pack
 
           #yaml
           pkgs.vscode-extensions.redhat.vscode-yaml
@@ -64,7 +64,7 @@
           pkgs.vscode-extensions.github.vscode-pull-request-github
 
           #deps
-          inputs.nix-vscode-extensions.extensions.${pkgs.system}.open-vsx.fill-labs.dependi
+          inputs.nix-vscode-extensions.extensions.${pkgs.stdenv.hostPlatform.system}.open-vsx.fill-labs.dependi
 
           #editorconfig
           inputs.nix-vscode-extensions.extensions.x86_64-linux.open-vsx.editorconfig.editorconfig
@@ -82,13 +82,13 @@
           pkgs.vscode-extensions.tomoki1207.pdf
 
           #uml excalidraw
-          inputs.nix-vscode-extensions.extensions.${pkgs.system}.open-vsx.pomdtr.excalidraw-editor
+          inputs.nix-vscode-extensions.extensions.${pkgs.stdenv.hostPlatform.system}.open-vsx.pomdtr.excalidraw-editor
 
           #codacy
-          inputs.nix-vscode-extensions.extensions.${pkgs.system}.open-vsx.codacy-app.codacy
+          inputs.nix-vscode-extensions.extensions.${pkgs.stdenv.hostPlatform.system}.open-vsx.codacy-app.codacy
 
           #theme
-          inputs.nix-vscode-extensions.extensions.${pkgs.system}.open-vsx.catppuccin.catppuccin-vsc-pack
+          inputs.nix-vscode-extensions.extensions.${pkgs.stdenv.hostPlatform.system}.open-vsx.catppuccin.catppuccin-vsc-pack
         ];
         userSettings = {
           "editor.formatOnSave" = true;
